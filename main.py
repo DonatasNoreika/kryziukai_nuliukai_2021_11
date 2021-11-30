@@ -10,6 +10,7 @@ laimejimai = [[True, False, False, True, False, False, True, False, False],
 
 zaidejas = "X"
 
+
 def atspausdinti_kvadrata():
     eile = 0
     for simbolis in kvadratas:
@@ -47,23 +48,23 @@ def ar_lygiosios():
         return True
 
 
-atspausdinti_kvadrata()
-
 while True:
-    print()
+    atspausdinti_kvadrata()
     pasirinkimas = int(input(f"Žaidėjas {zaidejas}: pasirinkite veiksmą"))
     if pasirinkimas in kvadratas:
         kvadratas[kvadratas.index(pasirinkimas)] = zaidejas
-        atspausdinti_kvadrata()
         if ar_lygiosios():
             print("Lygiosios!")
             break
+
         if tikrinti_laimejima():
             print(f"Žaidėjas {zaidejas} laimėjo!")
             break
+
         if zaidejas == "X":
             zaidejas = "O"
         else:
             zaidejas = "X"
+
     else:
         print("Nėra tokio pasirinkimo, bandykite dar kartą")
