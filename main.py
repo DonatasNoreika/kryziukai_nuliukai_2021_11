@@ -31,6 +31,14 @@ def tikrinti_laimejima():
             return True
     return False
 
+def ar_lygiosios():
+    for x in kvadratas:
+        if type(x) is int:
+            return False
+    else:
+        return True
+
+
 atspausdinti_kvadrata()
 
 while True:
@@ -39,6 +47,9 @@ while True:
     if pasirinkimas in kvadratas:
         kvadratas[kvadratas.index(pasirinkimas)] = zaidejas
         atspausdinti_kvadrata()
+        if ar_lygiosios():
+            print("Lygiosios!")
+            break
         if tikrinti_laimejima():
             print(f"Žaidėjas {zaidejas} laimėjo!")
             break
