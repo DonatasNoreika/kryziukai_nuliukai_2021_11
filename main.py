@@ -1,4 +1,13 @@
 kvadratas = [7, 8, 9, 4, 5, 6, 1, 2, 3]
+laimejimai = [[True, False, False, True, False, False, True, False, False],
+              [False, True, False, False, True, False, False, True, False],
+              [False, False, True, False, False, True, False, False, True],
+              [True, True, True, False, False, False, False, False, False],
+              [False, False, False, True, True, True, False, False, False],
+              [False, False, False, False, False, False, True, True, True],
+              [True, False, False, False, True, False, False, False, True],
+              [False, False, True, False, True, False, True, False, False]]
+
 zaidejas = "X"
 
 def atspausdinti_kvadrata():
@@ -9,8 +18,6 @@ def atspausdinti_kvadrata():
         if eile == 3:
             print()
             eile = 0
-
-laimejimai = [[True, False, False, True, False, False, True, False, False], [False, True, False, False, True, False, False, True, False], [False, False, True, False, False, True, False, False, True], [True, True, True, False, False, False, False, False, False], [False, False, False, True, True, True, False, False, False], [False, False, False, False, False, False, True, True, True], [True, False, False, False, True, False, False, False, True], [False, False, True, False, True, False, True, False, False]]
 
 
 def tikrinti_laimejima():
@@ -30,6 +37,7 @@ def tikrinti_laimejima():
         else:
             return True
     return False
+
 
 def ar_lygiosios():
     for x in kvadratas:
